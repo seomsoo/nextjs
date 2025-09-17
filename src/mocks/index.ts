@@ -1,4 +1,6 @@
 // src/mocks/index.ts
+export { server } from "./server"; // Node.js용
+export { worker } from "./browser"; // 브라우저용
 
 export async function initMocks() {
   // 개발 환경이 아니라면 실행 X

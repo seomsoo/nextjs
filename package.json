@@ -8,8 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
+    "test:changed": "jest --onlyChanged",
     "test:playwright": "playwright test",
-    "test:playwright:ui": "playwright test --ui"
+    "test:playwright:ui": "playwright test --ui",
+    "prepare": "husky"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.89.0",
@@ -37,6 +39,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
+    "husky": "^9.1.7",
     "jest": "^30.1.3",
     "jest-environment-jsdom": "^30.1.2",
     "msw": "^2.11.2",

@@ -1,17 +1,17 @@
 // src/mocks/index.ts
-export { server } from "./server"; // Node.js용
-export { worker } from "./browser"; // 브라우저용
+// export { server } from "./server"; // Node.js용
+// export { worker } from "./browser"; // 브라우저용
 
 export async function initMocks() {
   // 개발 환경이 아니라면 실행 X
-  if (process.env.NODE_ENV !== "development") return;
-  if (typeof window === "undefined") {
+  if (process.env.NODE_ENV !== 'development') return;
+  if (typeof window === 'undefined') {
     // 서버 사이드
-    const { server } = await import("./server");
+    const { server } = await import('./server');
     server.listen();
   } else {
     // 클라이언트 사이드
-    const { worker } = await import("./browser");
+    const { worker } = await import('./browser');
     await worker.start();
   }
 }
